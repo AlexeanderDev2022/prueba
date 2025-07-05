@@ -1,0 +1,15 @@
+# Exported from Render on 2025-07-05T21:11:28Z
+services:
+- type: web
+  name: Cibertec
+  runtime: python
+  repo: https://github.com/AlexeanderDev2022/Cibertec
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: ' fastapi run  .\configuracion\app\main.py'
+  autoDeployTrigger: commit
+  rootDir: Cibertec_Backend
+  previews:
+    generation: manual
+version: "1"
